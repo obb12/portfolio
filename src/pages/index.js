@@ -17,6 +17,12 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+        <div   style={{
+            textAlign:"right",
+            margin:"0px auto 0px auto"
+          }}>
+        pb 1:38.46 3x3x3
+        </div>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -31,7 +37,6 @@ class BlogIndex extends React.Component {
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )
         })}
